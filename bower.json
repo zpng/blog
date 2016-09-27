@@ -1,8 +1,8 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
+  "name": "blog",
+  "description": "zpng's blog",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
+  "homepage": "https://github.com/zpng/blog",
   "license": "MIT",
   "private": true,
   "dependencies": {
