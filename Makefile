@@ -6,4 +6,4 @@ build:
 build-production:
 	npm install
 	bower install
-	scp -r app/  root@60.205.169.84:/root/blog
+	scp -r app/  root@60.205.169.84:/static/website
