@@ -1,18 +1,15 @@
 'use strict';
-
 app.service('Toast', [
     '$timeout',
-    function (
-        $timeout
-    ) {
+    function ($timeout) {
         var toasts = [];
         var Toast = {
             toasts: toasts,
-            success: function (msg) {
-                Toast.toast('success', msg, 3000);
+            success: function (msg, timeout) {
+                Toast.toast('success', msg, timeout || 3000);
             },
-            error: function (msg) {
-                Toast.toast('danger', msg, 3000);
+            error: function (msg, timeout) {
+                Toast.toast('danger', msg, timeout || 3000);
             },
             loading: function (loadingPromise, msg) {
                 var cancel = Toast.toast('warning', msg, 3000000);

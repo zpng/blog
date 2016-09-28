@@ -1,0 +1,10 @@
+<div loading="uploadTask">
+    <dialog class="dialog col-sm-4" ng-if="loading">
+        <div style="padding: 10px">
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="{{uploadProgress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{uploadProgress}}%"></div>
+            </div>
+            <div>{{loadingText}}</div>
+        </div>
+    </dialog>
+</div>

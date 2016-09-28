@@ -1,0 +1,16 @@
+<div class="clearfix">
+    <ul class="pagination pull-right" ng-if="pages.length > 1">
+        <li ng-if="pages.length > 1 && pageInfo.currentPage !== 0">
+            <a href="" ng-click="switchPage(pageInfo.currentPage - 1)">上一页</a>
+        </li>
+        <li ng-repeat="pageItem in pages track by $index" ng-class="{active: pageItem.page === pageInfo.currentPage}">
+            <a href="" ng-click="switchPage(pageItem.page)" ng-if="pageItem.isNumber">{{pageItem.page + 1}}</a>
+            <span class="dots" ng-if="pageItem.isDots">...</span>
+        </li>
+        <li ng-if="pages.length > 1 && pageInfo.currentPage !== pageInfo.totalPage - 1">
+            <a href="" ng-click="switchPage(pageInfo.currentPage + 1)">下一页</a>
+        </li>
+    </ul>
+    <span class="text-muted pull-right" style="margin: 20px 0; height: 34px; line-height: 34px; margin-right: 10px;">共 {{pageInfo.totalItem || 0}} 个结果</span>
+    <a ng-if="!hideAll && pages.length > 1" href="" class="pull-right" style="margin: 20px 0; height: 34px; line-height: 34px; margin-right: 10px;" ng-click="showAll()">查看全部结果</a>
+</div>

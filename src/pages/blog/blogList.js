@@ -2,5 +2,5 @@
 
 app.controller('BlogListCtrl',['Toast',function (Toast) {
 
-    Toast.sucess('博客创建成功了');
+    Toast.success('博客创建成功了');
 }]);
