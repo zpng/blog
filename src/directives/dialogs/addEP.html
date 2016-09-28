@@ -1,0 +1,68 @@
+<div class="modal" on-close="onClose()">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">新建EP</h4>
+            </div>
+
+            <form name="form" class="form-horizontal" n-form novalidate ng-submit="form.checkSubmit(submit)">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="epNum">EP 数量</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" id="epNum" name="epNum" ng-model="config.epNum" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group" ng-if="isEPNumInvalid">
+                        <label class="col-sm-2 control-label"></label>
+                        <div class="col-sm-8">
+                            <p class="bg-warning" style="padding: 10px; margin: 5px 0">
+                                EP数量只能为大于0的数字。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">授课时间</label>
+                        <div class="col-sm-10">
+                            <label class="radio-inline">
+                                <input name="postponeType" type="radio" ng-model="config.postponeType" value="week">
+                                按周顺延
+                            </label>
+                            <label class="radio-inline">
+                                <input name="postponeType" type="radio" ng-model="config.postponeType" value="day">
+                                按天顺延
+                            </label>
+                            <label class="radio-inline">
+                                <input name="postponeType" type="radio" ng-model="config.postponeType" value="none">
+                                手动设置
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group" ng-if="config.postponeType === 'day'">
+                        <label class="col-sm-2 control-label">天数</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" id="postponeInterval" name="epNum" required ng-model="config.postponeInterval">
+                        </div>
+                    </div>
+
+                    <div class="form-group" ng-if="isIntervalInvalid">
+                        <label class="col-sm-2 control-label"></label>
+                        <div class="col-sm-8">
+                            <p class="bg-warning" style="padding: 10px; margin: 5px 0">
+                                顺延天数只能为1至6的数字。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit" ng-disabled="!form.$valid || isIntervalInvalid || isEPNumInvalid">确定</button>
+                    <button class="btn btn-default" ng-click="onClose()">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

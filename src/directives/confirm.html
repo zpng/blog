@@ -1,0 +1,17 @@
+<div class="modal" on-close="confirmInfo.cancel()" ng-if="confirmInfo.text" ng-style="{'z-index':confirmInfo.zIndex}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">{{confirmInfo.title}}</h4>
+            </div>
+            <div class="modal-body">
+                <div ng-repeat="line in confirmInfo.text track by $index"><strong ng-if="line.content" ng-bind-html="line.tag + line.content"></strong></div>
+                <div ng-repeat="line in confirmInfo.imageIds track by $index"><strong ng-if="line.src">{{ line.tag }}<img ng-src="{{ line.src | image }}" width="80" height="80" class="img-circle"></strong></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" ng-click="confirmInfo.cancel()" ng-if="!confirmInfo.isAlert">{{confirmInfo.cancelText || '取消'}}</button>
+                <button type="button" class="btn btn-primary" ng-click="confirmInfo.submit()">{{confirmInfo.confirmText || '确定'}}</button>
+            </div>
+        </div>
+    </div>
+</div>

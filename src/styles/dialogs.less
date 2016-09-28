@@ -1,0 +1,179 @@
+@import (reference) 'variables';
+
+dialog {
+    color: @text-color;
+    padding: 0;
+    border: 1px solid #666666;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    min-width: 320px;
+    min-height: 180px;
+    position: relative;
+    .icon-times {
+        position: relative;
+        top: 2px;
+    }
+
+    .dialog-header {
+        margin: 0;
+        padding: 10px;
+        font-size: @font-size-large;
+        box-sizing: border-box;
+        height: 40px;
+        border-bottom: 1px solid #dddddd;
+        color: @gray-dark;
+
+        .close {
+            cursor: pointer;
+            float: right;
+            color: @gray-light;
+            &:hover {
+                color: #333333;
+            }
+        }
+    }
+
+    .dialog-body {
+        padding: 14px 20px 18px;
+        box-sizing: border-box;
+
+        //用于内容居中，类似在alert、confirm弹窗情况中使用
+        &.dialog-default-body {
+            font-size: @font-size-large;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .icon-circle-exclamation {
+                color: @state-danger-text;
+                margin-right: 2px;
+            }
+        }
+
+        //如果dialog需要footer，由于footer定位为absolute，需要考虑footer的高度
+        &.with-footer {
+            margin-bottom: 43px;
+
+            &.fixed-height {
+                height: calc(~'100% - 83px');
+            }
+
+            &.stretchable-height {
+                min-height: calc(~'100% - 83px');
+            }
+        }
+
+        &.max-width {
+            max-width: 380px;
+        }
+    }
+
+    //dialog-footer定位改为absolute,在需要设置dialog高度的时候保证footer置底
+    .dialog-footer {
+        text-align: right;
+        background: #f0f0f0;
+        padding: 10px;
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        box-sizing: border-box;
+        input {
+            margin-top: 5px;
+        }
+
+        .btn {
+            min-width: 78px;
+        }
+        a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+    }
+}
+
+dialog::backdrop {
+    background: transparent;
+}
+
+dialog.full-screen {
+    position: fixed;
+    background: transparent;
+    box-sizing: border-box;
+    border: 0px;
+    text-align: center;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+
+    .dialog-header {
+        .clearfix;
+
+        padding: 0;
+        border: none;
+        position: relative;
+        z-index: 2;
+        height: 32px;
+        padding-top: 16px;
+        bottom: -16px;
+        background: transparent;
+
+        .close {
+            color: #fff;
+            position: fixed;
+            width: 35px;
+            height: 35px;
+            line-height: 42px;
+            text-align: center;
+            font-size: 32px;
+            background: rgba(0, 0, 0, 0.6);
+            top: 20px;
+            right: 10px;
+            font-weight: normal;
+
+            &:hover, &:active, &:focus {
+                outline: none;
+                text-decoration: none;
+            }
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.8);
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 20px;
+                top: 0;
+                left: 0;
+                transform: translate(17px, 8px) rotate(45deg);
+                background-color: #ffffff;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 20px;
+                top: 0;
+                left: 0;
+                transform: translate(17px, 8px) rotate(-45deg);
+                background-color: #ffffff;
+            }
+        }
+    }
+
+    .dialog-body {
+        overflow: hidden;
+        padding: 0px;
+        width: 100%;
+    }
+
+    &::backdrop {
+        background: rgba(0, 0, 0, 0.6);
+    }
+}

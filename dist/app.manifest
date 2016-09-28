@@ -1,0 +1,29 @@
+CACHE MANIFEST
+# Time: Tue Sep 27 2016 10:11:28 GMT+0800 (CST)
+
+CACHE:
+http://test-static.zhenguanyu.com/tutor/tutor-crm-web/bower_components/bootstrap/fonts/glyphicons-halflings-regular-448c34a56d.woff2
+http://test-static.zhenguanyu.com/tutor/tutor-crm-web/bower_components/bootstrap/fonts/glyphicons-halflings-regular-fa2772327f.woff
+http://test-static.zhenguanyu.com/tutor/tutor-crm-web/bower_components/bootstrap/fonts/glyphicons-halflings-regular-f4769f9bdb.eot
+http://test-static.zhenguanyu.com/tutor/tutor-crm-web/bower_components/bootstrap/fonts/glyphicons-halflings-regular-e18bbf611f.ttf
+http://test-static.zhenguanyu.com/tutor/tutor-crm-web/bower_components/font-awesome/fonts/fontawesome-webfont-d95d6f5d5a.woff
+http://test-static.zhenguanyu.com/tutor/tutor-crm-web/bower_components/font-awesome/fonts/fontawesome-webfont-7149833697.eot
+http://test-static.zhenguanyu.com/tutor/tutor-crm-web/bower_components/font-awesome/fonts/fontawesome-webfont-c4668ed244.ttf
+http://test-static.zhenguanyu.com/tutor/tutor-crm-web/bower_components/font-awesome/fonts/fontawesome-webfont-65bcbc899f.svg
+http://test-static.zhenguanyu.com/tutor/tutor-crm-web/styles/icon/fonts/icomoon-b9a72013b2.woff
+http://test-static.zhenguanyu.com/tutor/tutor-crm-web/styles/icon/fonts/icomoon-9b05e8a488.ttf
+http://test-static.zhenguanyu.com/tutor/tutor-crm-web/styles/icon/fonts/icomoon-071e65be3b.svg
+http://test-static.zhenguanyu.com/tutor/tutor-crm-web/styles/icon/fonts/icomoon-7dd7899b0f.eot
+http://test-static.zhenguanyu.com/tutor/tutor-crm-web/styles/icon/fonts/icomoon-071e65be3b.svg
+http://test-static.zhenguanyu.com/tutor/tutor-crm-web/images/icon-calendar-H-e6b9ed4f14.png
+http://test-static.zhenguanyu.com/tutor/tutor-crm-web/images/icon-calendar-N-e4ba634cc1.png
+http://test-static.zhenguanyu.com/tutor/tutor-crm-web/images/close-image-9535d560b9.png
+http://test-static.zhenguanyu.com/tutor/tutor-crm-web/images/add-image-9a436981d4.png
+http://test-static.zhenguanyu.com/tutor/tutor-crm-web/images/correct-f14fba723d.svg
+http://test-static.zhenguanyu.com/tutor/tutor-crm-web/images/wrong-729ef3db9d.svg
+http://test-static.zhenguanyu.com/tutor/tutor-crm-web/app-4fa90fb5e4.css
+http://test-static.zhenguanyu.com/tutor/tutor-crm-web/app-b6a18850a1.js
+seed.js
+
+NETWORK:
+*

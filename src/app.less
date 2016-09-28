@@ -1,0 +1,60 @@
+@import 'bower_components/bootstrap/less/bootstrap';
+@import 'bower_components/font-awesome/less/font-awesome';
+@import 'styles/angular-ui';
+@import 'styles/angular-bootstrap';
+@import 'styles/dialogs';
+@import 'styles/icon/style';
+
+@import 'directives/common/form/item/inputDatetime';
+@import 'directives/common/form/item/inputTime';
+@import 'directives/common/form/item/calendar';
+@import 'directives/common/form/item/contentImage';
+@import 'directives/common/form/item/filterBar';
+@import 'directives/common/table/thOrder';
+@import 'directives/common/loading/pageLoading';
+@import 'directives/common/loading/dialogLoading';
+@import 'directives/common/returnTop/returnTop';
+
+@import 'pages/keynote/keynoteEdit';
+@import 'directives/keynote/keynoteDirectory';
+
+@import 'pages/season/seasonDetail';
+
+@import 'pages/serial/serialPrototype';
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    padding-top: 70px;
+
+    & > div {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        bottom: 0px;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+}
+
+.toasts {
+    z-index: 1000000;
+    position: fixed;
+    width: 500px;
+    top: 100px;
+    left: 50%;
+    margin-left: -250px;
+    text-align: center;
+}
+
+.video-entity {
+    vertical-align:text-top;
+    text-align: center;
+    background-color: #8c8c8c;
+    color: #e7e7e7;
+    line-height: 90px;
+}
