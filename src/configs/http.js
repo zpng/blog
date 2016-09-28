@@ -59,7 +59,9 @@ app.config(['$httpProvider', function ($httpProvider) {
                     }
 
                     if (resp.status === 401)  {
-                        location.replace(API_SERVER.auth + 'login?service=' + encodeURIComponent(location.href));
+                        //todo
+                        console.log(resp.status);
+                        // location.replace(API_SERVER.auth + 'login?service=' + encodeURIComponent(location.href));
                     } else {
                         // next tick
                         $timeout(function () {

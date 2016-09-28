@@ -7,7 +7,7 @@ app.directive('mainNav', [
     '$route',
     function (API_SERVER, User, navFactory, $route) {
         var pages = {
-            blogList: ['blogListCtrl'],
+            blogList: ['BlogListCtrl'],
         };
 
         return navFactory.create(pages, 'directives/mainNav.html', true, function ($scope) {

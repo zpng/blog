@@ -1,4 +1,4 @@
-# tutor-crm-web
+# Sanks Blog
 
 ## initialize development environment
 

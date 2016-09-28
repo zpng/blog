@@ -35,11 +35,13 @@ app.config([
                     }
 
                     if (exception instanceof ForbiddenException) {
-                        if ($location) {
-                            $location.replace(API_SERVER.auth + 'login?service=' + encodeURIComponent($location.absUrl()));
-                        } else {
-                            window.location.replace(window.location.pathname + '#/login');
-                        }
+                        console.log(API_SERVER);
+                        //todo login service
+                        // if ($location) {
+                        //     $location.replace(API_SERVER.auth + 'login?service=' + encodeURIComponent($location.absUrl()));
+                        // } else {
+                        //     window.location.replace(window.location.pathname + '#/login');
+                        // }
                     } else {
                         $delegate(exception, cause);
                     }
