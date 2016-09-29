@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('BlogListCtrl', ['Toast', '$scope', 'Blog', function (Toast, $scope, Blog) {
+app.controller('BlogListCtrl', ['$route', 'Toast', '$scope', 'Blog', function ($route, Toast, $scope, Blog) {
 
     $scope.blogs = Blog.query();
     $scope.loadingPromise = $scope.blogs.$promise;
