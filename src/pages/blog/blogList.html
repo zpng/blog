@@ -1,5 +1,24 @@
-<div class="container">
+<div page-loading="loadingPromise"></div>
+<div class="page container-fluid">
     <div class="row">
-        <div class="h1">//todo</div>
+
+        <table class="table">
+            <thead>
+            <th>博客id</th>
+            <th>题目</th>
+            <th>创建时间</th>
+            <th>更新时间</th>
+            </thead>
+            <tbody>
+            <tr ng-repeat="blog in blogs">
+                <td>{{blog.id}}</td>
+                <td><a ng-href="#/blogs/{{blog.id}}">{{blog.title}}</a></td>
+                <td>{{blog.createdTime | date:'yyyy-MM-dd HH:mm'}} </td>
+                <td>{{blog.updatedTime | date:'yyyy-MM-dd HH:mm'}} </td>
+            </tr>
+            </tbody>
+        </table>
+
     </div>
+</div>
 </div>

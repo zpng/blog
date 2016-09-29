@@ -78,7 +78,7 @@ function scripts() {
         '!' + SRC + 'bower_components/**/*.*',
         '!' + SRC + 'index.html'
     ]).pipe(templateCache('templates.js', {
-        module: 'tutor-crm-web'
+        module: 'blog-web'
     }));
 
     return merge(scriptFiles, template)

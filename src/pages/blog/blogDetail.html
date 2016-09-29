@@ -1,0 +1,22 @@
+<div page-loading="loadingPromise"></div>
+<div class="page container-fluid">
+    <div class="row">
+
+        <h1>{{blog.title}}</h1>
+        <div class="form-group">
+            <label>作者: </label><span>{{blog.authorId}}</span>
+        </div>
+        <div class="form-group">
+            <label>创建时间: </label><span>{{blog.createdTime | date:'yyyy-MM-dd HH:mm'}}</span>
+            <label>更新时间: </label><span>{{blog.updatedTime | date:'yyyy-MM-dd HH:mm'}}</span>
+        </div>
+
+        <div class="form-group">
+
+            <div class="h3">{{blog.content}}</div>
+        </div>
+
+
+    </div>
+</div>
+</div>

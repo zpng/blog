@@ -1,6 +1,6 @@
 'use strict';
 
-var APP_MODULE_NAME = 'tutor-crm-web';
+var APP_MODULE_NAME = 'blog-web';
 
 var app = angular.module(APP_MODULE_NAME, [
     'ngRoute',

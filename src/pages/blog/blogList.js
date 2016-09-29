@@ -1,6 +1,7 @@
 'use strict';
 
-app.controller('BlogListCtrl',['Toast',function (Toast) {
+app.controller('BlogListCtrl', ['Toast', '$scope', 'Blog', function (Toast, $scope, Blog) {
 
-    Toast.success('博客创建成功了');
+    $scope.blogs = Blog.query();
+    $scope.loadingPromise = $scope.blogs.$promise;
 }]);
