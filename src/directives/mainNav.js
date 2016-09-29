@@ -12,7 +12,7 @@ app.directive('mainNav', [
 
         return navFactory.create(pages, 'directives/mainNav.html', true, function ($scope) {
             $scope.authUrl = API_SERVER.auth;
-            $scope.user = User.current();
+            // $scope.user = User.current();
 
             var onRouteChangeSuccess = function () {
                 if (!$route.current || !$route.current.$$route) {
