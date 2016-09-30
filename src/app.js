@@ -11,7 +11,8 @@ var app = angular.module(APP_MODULE_NAME, [
     'ui',
     'ui.bootstrap',
     'monospaced.qrcode',
-    'sprintf'
+    'sprintf',
+    'textAngular'
 ]);
 
 window.app = app;
