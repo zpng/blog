@@ -15,6 +15,6 @@ app.config(['$routeProvider', function ($routeProvider) {
         controller: 'BlogDetailCtrl'
     }).
     otherwise({
-        redirectTo: '/blogList'
+        redirectTo: '/blogs'
     });
 }]);
