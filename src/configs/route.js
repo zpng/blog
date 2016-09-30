@@ -2,7 +2,7 @@
 
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.
-    when('/blogList', {
+    when('/blogs', {
         templateUrl: 'pages/blog/blogList.html',
         controller: 'BlogListCtrl'
     }).

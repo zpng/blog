@@ -1,4 +1,5 @@
 build-development:
+	npm install
 	bower install
 	gulp
 

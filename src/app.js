@@ -10,8 +10,6 @@ var app = angular.module(APP_MODULE_NAME, [
     'ngSanitize',
     'ui',
     'ui.bootstrap',
-    'monospaced.qrcode',
-    'sprintf',
     'textAngular'
 ]);
 
