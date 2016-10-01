@@ -11,8 +11,8 @@ app.config(['$routeProvider', function ($routeProvider) {
         controller: 'BlogCreateCtrl'
     }).
     when('/blogs/:id', {
-        templateUrl: 'pages/blog/blogDetail.html',
-        controller: 'BlogDetailCtrl'
+        templateUrl: 'pages/blog/blogCreate.html',
+        controller: 'BlogCreateCtrl'
     }).
     otherwise({
         redirectTo: '/blogs'

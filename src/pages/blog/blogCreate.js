@@ -1,10 +1,21 @@
 'use strict';
 
-app.controller('BlogCreateCtrl', ['$location', '$route', 'Toast', '$scope', 'Blog', function ($location, $route, Toast, $scope, Blog) {
+app.controller('BlogCreateCtrl', ['$routeParams', '$location', '$route', 'Toast', '$scope', 'Blog', function ($routeParams, $location, $route, Toast, $scope, Blog) {
+
+
+    $scope.id = $routeParams.id;
+    if ($scope.id){
+        $scope.blog = Blog.get({id : $scope.id});
+    }
 
     $scope.save = function () {
-        Blog.save($scope.blog).$promise.then(function () {
-            $location.url('/blogList');
-        });
+        Blog.save($scope.blog).$promise.then(function(){
+            $route.reload();
+        } );
+    };
+
+    $scope.editing = false;
+    $scope.toEdit = function(){
+       $scope.editing = true;
     };
 }]);
