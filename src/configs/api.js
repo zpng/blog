@@ -14,6 +14,7 @@ app.constant('API_SERVER', {
     },
     online: {
         // 'auth': 'https://account.zhenguanyu.com/',
-        'cms': 'http://60.205.169.84/',
+        // 'cms': 'http://60.205.169.84/',
+        'cms': 'http://www.sanksblog.com/',
     }
 }[env]);
